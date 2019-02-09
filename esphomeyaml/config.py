@@ -458,9 +458,9 @@ def line_info(obj, highlight=True):
     """Display line config source."""
     if not highlight:
         return None
-    if hasattr(obj, '__config_file__'):
+    if hasattr(obj, 'lc'):
         return color('cyan', "[source {}:{}]"
-                     .format(obj.__config_file__, obj.__line__ or '?'))
+                     .format(obj.lc.line, obj.lc.col))
     return None
 
 
