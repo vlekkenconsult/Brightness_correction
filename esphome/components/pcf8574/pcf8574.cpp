@@ -13,9 +13,6 @@ void PCF8574Component::setup() {
     this->mark_failed();
     return;
   }
-
-  this->write_gpio_();
-  this->read_gpio_();
 }
 void PCF8574Component::dump_config() {
   ESP_LOGCONFIG(TAG, "PCF8574:");
